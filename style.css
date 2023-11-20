@@ -390,7 +390,7 @@ section{
 }
 
 .rcs{
-  color: white;
+  color: transparent;
   -webkit-text-stroke: 4px blue;
 }
 
