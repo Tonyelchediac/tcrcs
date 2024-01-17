@@ -792,6 +792,7 @@ nav .menu.open {
     .home{
         grid-template-columns: 1fr;
         padding-top: 110px;
+        background-position: 50% 0%;
       
     }
 
