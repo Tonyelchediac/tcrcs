@@ -575,11 +575,26 @@ section{
 
 footer{
     background-color: #141f2e;
+    background-image: url('images/08_001.svg');
     color: #dcdcdc;
     padding: 1.5rem 10%;
-    display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+.contant-pricing{
+  padding: 14px 0px 0px 0px;
+}
+
+
+.footer-content{
+  background-color: #141f2e;
+  color: #dcdcdc;
+  padding: 1.5rem 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 footer p{
@@ -722,13 +737,6 @@ footer a i{
 .list-group-item{
   padding: 10px 0 10px 0;
 }
-
-.contant-pricing{
-  padding: 14px 10% 20px 24px;
-  background: #141f2e;
-  background-image: url('images/08_001.svg');
-}
-
 
 
 
