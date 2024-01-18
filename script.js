@@ -87,10 +87,7 @@ const sr = ScrollReveal({
 
 sr.reveal('.home-content')
 sr.reveal('.home-image')
-
-
 sr.reveal('.about-content')
-
 sr.reveal('.skills')
 sr.reveal('.main-text1')
 sr.reveal('.nothing')
@@ -99,13 +96,8 @@ sr.reveal('.service1')
 sr.reveal('.service2')
 sr.reveal('.service3')
 sr.reveal('.main-text')
+sr.reveal('.col-lg-4')
 
-
-$(document).ready(function() {
-  $('.burger').click(function() {
-    $('.navbar').toggleClass('open');
-  });
-});
 
 
 

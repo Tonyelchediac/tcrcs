@@ -631,7 +631,7 @@ footer a i{
   background: var(--bg-color);
   transition: transform .4s;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .card-body{
@@ -669,6 +669,7 @@ footer a i{
   background-color: black;
   width: 100%;
   padding: 0.5rem 1rem ;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .card-header1{
@@ -677,6 +678,7 @@ footer a i{
   background-color: blue;
   width: 100%;
   padding: 0.5rem 1rem ;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .s_comparisons_currency{
@@ -685,7 +687,7 @@ footer a i{
 }
 
 .s_comparisons_price{
-  font-size: 40px;
+  font-size: 50px;
   color: black;
 }
 
@@ -698,12 +700,14 @@ footer a i{
   background-color: black;
   width: 100%;
   padding: 0.5rem 1rem;
+  border-radius: 0px 0px 20px 20px;
 }
 
 .disdos1{
   background-color: blue;
   width: 100%;
   padding: 0.5rem 1rem;
+  border-radius: 0px 0px 20px 20px;
 }
 
 .disdos p{
@@ -733,6 +737,7 @@ footer a i{
   position: relative; overflow: hidden; z-index: 1;
   border: 2px solid var(--hover-color);
 }
+
 
 .list-group-item{
   padding: 10px 0 10px 0;
