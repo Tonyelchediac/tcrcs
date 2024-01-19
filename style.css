@@ -1117,13 +1117,15 @@ nav .menu.open {
     }
 
     .wrapper{
-      margin: 50px auto;
+      margin: 30px auto;
       width: 80%;
     }
 
     .dis-about{
-      grid-template-columns: 1fr;
-  }
+      grid-template-columns: repeat(1,1fr);
+      grid-gap: 4px;
+      justify-content: center;
+    }
     
   }
 
