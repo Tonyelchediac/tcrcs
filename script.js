@@ -97,6 +97,7 @@ sr.reveal('.service2')
 sr.reveal('.service3')
 sr.reveal('.main-text')
 sr.reveal('.col-lg-4')
+sr.reveal('.maximize p')
 
 
 
