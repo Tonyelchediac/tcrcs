@@ -1238,6 +1238,18 @@ nav .menu.open {
       justify-content: center;
     }
     
+    .tcrcs-box{
+      display: block;
+    }
+
+    .prev, .next{
+      top: 107%;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: transparent;
+    }
+
   }
 
 
