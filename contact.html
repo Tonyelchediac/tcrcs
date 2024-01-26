@@ -98,17 +98,22 @@
 <script src="script.js"></script>
 
 <!--project pricing payment section---------------------------------------------------------------------------->
-    <script>
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const price = urlParams.get('s_comparisons_price');
-    
-            const priceInput = document.getElementById('priceInput');
-            if (priceInput) {
-                priceInput.value = price || '';
-            }
+   
+<script>
+    window.onload =function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const price = urlParams.get('s_comparisons_price');
+        const priceInput = document.getElementById('priceInput');
+        const mainText = document.querySelector('.main-text span');
+        const homeContent = document.querySelector('.home-content h1');
+
+        if (priceInput && price) {
+            priceInput.value = price || '';
+            mainText.textContent = 'Order Now - Price: ' + price;
+            homeContent.innerHTML = 'Order <span style="color: blue;">Now</span>';
         }
-    </script>
+    }
+</script>
        
 <!--footer section------------------------------------------------------->
 
