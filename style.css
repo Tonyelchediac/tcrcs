@@ -1032,7 +1032,6 @@ section{
     position: absolute;
     top: 50%;
     right: 20px;
-    transform: translateY(-50%);
     z-index: 999;
   }
   
@@ -1062,7 +1061,7 @@ nav .menu.open {
     position: fixed;
     top: 0;
     right: 0;
-    width: 90%;
+    width: 80%;
     height: /*auto*/ 100%;
     background-color:white;
     padding: 40px;
@@ -1071,16 +1070,11 @@ nav .menu.open {
   
   nav .menu.open li {
     padding-top: 40px;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
     text-align: center;
   }
   
-  .menu-open nav .menu.open li {
-    opacity: 0;
-    transform: translateY(0);
-  }
+
     
     .home{
         grid-template-columns: 1fr;
@@ -1185,7 +1179,7 @@ nav .menu.open {
         padding-top: 10rem;
     }
 
-    @keyframes menuItemFadeIn {
+   /* @keyframes menuItemFadeIn {
       from {
         opacity: 0;
         transform: translateX(-200px);
@@ -1194,7 +1188,7 @@ nav .menu.open {
         opacity: 1;
         transform: translateX(0);
       }
-    }
+    } */
     
     .menu li {
       animation: menuItemFadeIn 1s ease;

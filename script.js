@@ -21,40 +21,39 @@ window.addEventListener("scroll",function(){
 
 ////hamburger form/////////////////////////////////////////////////////
 
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('.menu');
-const menuItems = menu.querySelectorAll('li'); document.querySelectorAll('.menu li');
+document.addEventListener('DOMContentLoaded', function() {
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
+  const menuItems = document.querySelectorAll('.menu li');
+  let isMenuOpen = false;
 
-let isMenuOpen = false;
-
-burger.addEventListener('click', () => {
-  if (!isMenuOpen) {
-    openMenu();
-  }
-  else {
-    closeMenu();
-  }
-});
-
-function openMenu() {
-  menu.classList.add('open');
-  document.body.classList.add('menu-open');
-  isMenuOpen = true;
-}
-
-
-function closeMenu() {
-  menu.classList.remove('open');
-  document.body.classList.remove('menu-open');
-  isMenuOpen = false;
-}
-
-menuItems.forEach((menuItem) => {
-  menuItem.addEventListener('click', () => {
-    closeMenu();
+  burger.addEventListener('click', () => {
+      if (!isMenuOpen) {
+          openMenu();
+      } else {
+          closeMenu();
+      }
   });
 
+  function openMenu() {
+      menu.classList.add('open');
+      document.body.classList.add('menu-open');
+      isMenuOpen = true;
+  }
+
+  function closeMenu() {
+      menu.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      isMenuOpen = false;
+  }
+
+  menuItems.forEach((menuItem) => {
+      menuItem.addEventListener('click', () => {
+          closeMenu();
+      });
+  });
 });
+
 
 ///////////////////////////////////////////////////////////////////
 
