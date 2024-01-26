@@ -58,22 +58,8 @@ menuItems.forEach((menuItem) => {
 
 ///////////////////////////////////////////////////////////////////
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  menu.classList.toggle('show');
-  menuItems.forEach((item, index) => {
-    if (item.style.animation) {
-      item.style.animation = `menuItemFadeIn 0.2s ease forwards ${index / 7 + 0.3}s`;
-    }
-  });
-});
-
 //////////////////////////////////////////////////////////////////
 
-setTimeout(function() {
-  var span = document.getElementById("mySpan");
-  span.innerHTML = "tony";
-}, 2000);
 
 /////////scrollreveal////////////////////////////
 
@@ -87,6 +73,7 @@ const sr = ScrollReveal({
 
 sr.reveal('.home-content')
 sr.reveal('.home-image')
+sr.reveal('.img-about')
 sr.reveal('.about-content')
 sr.reveal('.skills')
 sr.reveal('.main-text1')
@@ -99,15 +86,15 @@ sr.reveal('.main-text')
 sr.reveal('.col-lg-4')
 sr.reveal('.maximize p')
 
+////////////////////image slides////////////////////////////////////////////
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -128,5 +115,28 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+/////////send mail//////////////////////////////////////////////////
 
+function submitForm() {
 
+  const name = document.querySelector('#myform [name="name"]').value;
+  const email = document.querySelector('#myform [name="email"]').value;
+  const address = document.querySelector('#myform [name="address"]').value;
+  const phone = document.querySelector('#myform [name="phone"]').value;
+  const message = document.querySelector('#myform [name="message"]').value;
+
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "youremail@gmail.com",
+    Password: "yourpassword",
+    To: "tonialchediac@gmail.com",
+    From: email,
+    Subject: "New Contact Form Submission",
+    Body: `Name: ${name}<br>Email: ${email}<br>Address: ${address}<br>Phone: ${phone}<br>Message: ${message}`
+  }).then(
+    message => alert("Message sent successfully!")
+  ).catch(
+    error => alert("Failed to send message. Error: " + error)
+  );
+  return false;
+}

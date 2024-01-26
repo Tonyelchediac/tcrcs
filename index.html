@@ -25,7 +25,7 @@
            <li class="li" cdslsk><a href="services.html">Services</a></li>
            <li class="li" cdslsk><a href="pricing.html">Pricing</a></li>
            <li class="li" cdslsk><a href="about.html">About Us</a></li>
-           <li class="li" cdslsk><a href="#contact.html">Contact Us</a></li>
+           <li class="li" cdslsk><a href="contact.html">Contact Us</a></li>
            <li class="li" cdslsk><a href="tel:+96171096971"><font color="blue"><i class='bx bxs-phone-call'></i> Click to call us</font></a></li>
          </ul>
               
@@ -54,7 +54,7 @@
         <h3>Every smart company deserves to work with intelligent tools.</h3>
             </div>
             <div class="btn-box">
-              <a href="#contact">
+              <a href="contact.html">
               <button class="btn" >Start Now ></button>
               </a>
             </div>
@@ -73,9 +73,11 @@
     <p>Efficiency requires the right tools. Imagine Batman saving Gotham City without his bat-tools?
 
       There's no magic involved, it's time to get the tools you deserve.</p>
-       <div class="btn-box">
-        <button class="btn" >Learn More ></button>
-        </div>
+      <div class="btn-box">
+        <a href="contact.html">
+        <button class="btn" >Discover More ></button>
+        </a>
+      </div>
   </div>
 </div>
 <hr>
@@ -87,9 +89,11 @@
     <p>Working in the office is good, but working remotely without distractions is even better. Our cloud service makes accessing your data easier than ever.
 
       Get what you need, when and where you need it.</p>
-       <div class="btn-box">
-        <button class="btn" >Learn More ></button>
-        </div>
+      <div class="btn-box">
+        <a href="contact.html">
+        <button class="btn" >Discover More ></button>
+        </a>
+      </div>
   </div>
   <div class="img-about">
     <img src="images/s_image_text.svg" alt="">
@@ -167,25 +171,26 @@
     </div>
   </div>
   </section>
-<!--contact section---------------------------------------------------------------------------->
-
-<section id="contact" class="contant">
-    <div class="main-text" cdslsk>
-        <span> Ask a question</span>
-        <h2>Contact us</h2>
-    </div>
-    <form method="post" autocomplete="off" name="google-sheet" id="myform">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="text" name="email" placeholder="Your Email" required>
-        <input type="text" name="address" placeholder="Your Address" required>
-        <input type="number" name="phone" placeholder="+Code-Phone Number" required>
-        <textarea name="message" id="" cols="30" rows="10" placeholder="How We Can help You" required></textarea>
-        <div class="btn-box formBtn">
-            <button type="submit" class="btn" onclick="reserform()">Send Message</button>
-        </div> 
-    </form>
-
+<!--advanced section---------------------------------------------------------------------------->
+<section class="advanced">
+  <div class="client">
+    <h6 class="h8">12</h6>
+    <h7 class="h7">efficient solutions</h7>
+  </div>
+  <div class="client">
+    <h6 class="h8">45</h6>
+    <h7 class="h7">Functional code snippets</h7>
+  </div>
+  <div class="client">
+    <h6 class="h8">8</h6>
+    <h7 class="h7">Stunning web pages</h7>
+  </div>
+  <div class="client">
+    <h6 class="h8">37</h6>
+    <h7 class="h7">High-quality graphics</h7>
+  </div>
 </section>
+
 
 <!--footer section------------------------------------------------------->
 
@@ -208,24 +213,5 @@
 </footer>
 <!-- java script -------------------------------------------------->
 
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxLikZO6QRFZKAYcklLeJ0Y9l_brJJDT7saNvL86B8v-CE36ztqnab9gn00dX6EH9xX/exec'
-    const form = document.forms['google-sheet']
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => alert("Thanks for Contacting us..! We Will Contact You As Soon As Possible..."))
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
-
-
-
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="script.js"></script>
 </body>
 </html>
