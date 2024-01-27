@@ -120,7 +120,6 @@ span{
 
   .menu li a:hover{
     color: var(--hover-color);
-
   }
     
   nav .burger {
@@ -279,10 +278,6 @@ section{
 
 .social-icons a i{
     font-size: 1.5rem;
-}
-
-.social-icons a:hover{
-  color: var(--bg-color);
 }
 
 .social-icons a::before{
@@ -980,10 +975,6 @@ footer a i{
 }
 section{
   padding: 100px 10% 50px 10%;
-}
-
-.social-icons a:hover{
-  color: var(--hover-color);
 }
 
    .home-content h1{
