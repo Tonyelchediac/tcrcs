@@ -40,14 +40,6 @@
     <!--home section--------------------------------------------------------------------------->
 
    <section id="home" class="home-pricing">
-    <div class="home-image">
-      <div class="me"> &lt;/&gt; </div>
-      <div class="img-box">
-          <div class="tc">TC</div>
-          <div class="rcs">RCS</div>
-      </div>
-   </div>
-
     <div class="home-content">
       <h1 cdslsk>Contact <span>Us</span></h1>
     </div>
@@ -106,15 +98,15 @@
         const priceInput = document.getElementById('priceInput');
         const mainText = document.querySelector('.main-text span');
         const homeContent = document.querySelector('.home-content h1');
+        const homeConten = document.querySelector('.home-content .p');
 
         if (priceInput && price) {
             priceInput.value = price || '';
-            mainText.textContent = 'Order Now - Price: ' + price;
-            homeContent.innerHTML = 'Order <span style="color: blue;">Now</span>';
+            mainText.textContent = 'Order - Price: ' + price + ' / week';
+            homeContent.innerHTML = 'Contact <span style="color: blue;">Us</span><br><font style="font-size: 1.25rem;"> ( Order <span style="color: blue;">Now </span>)</font>';
         }
     }
 </script>
-       
 <!--footer section------------------------------------------------------->
 
 <footer>
@@ -129,8 +121,10 @@
       </div>
     </section>
     <div class="footer-content">
-        <p cdslsk>Copyright &copy; 2023 by TCRCS || All Right Reserved.</p>
-        <p cdslsk>Beta version</p>
+        <p cdslsk>Copyright &copy; 2023 by TCRCS || All Right Reserved.
+          <br>
+          Tony Company - Run Codes & Softwares.
+        </p>
         <a href="#home"><i class='bx bx-arrow-from-bottom'></i></a>
     </div>
 </footer>
