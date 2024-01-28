@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="x-icon" href="images/TON.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  if (!sessionStorage.getItem("validPasscode")) {
+    window.location.replace("pricinglogin.html");
+  }
+});
+
+window.addEventListener("beforeunload", function() {
+  sessionStorage.removeItem("validPasscode");
+  history.replaceState(null, document.title, window.location.href);
+});
+</script>
+
+    
 </head>
 <body>
 
@@ -23,7 +38,7 @@
          <ul class="menu">
             <li class="li" cdslsk><a href="index.html">Home</a></li>
             <li class="li" cdslsk><a href="services.html">Services</a></li>
-            <li class="li" cdslsk><a href="pricing.html">Pricing</a></li>
+            <li class="li" cdslsk><a href="pricinglogin.html" style="color: blue; text-shadow: 2px 2px 4px blue;">pricing</a></li>
             <li class="li" cdslsk><a href="about.html">About Us</a></li>
             <li class="li" cdslsk><a href="contact.html">Contact Us</a></li>
             <li class="li" cdslsk><a href="tel:+96171096971"><font color="blue"><i class='bx bxs-phone-call'></i> Click to call us</font></a></li>
@@ -47,6 +62,7 @@
 
 <!--pricing section----------------------------------------------------------------------------->
 <section class="s_comparisons pt32 pb32 o_cc o_cc2 o_colored_level" data-snippet="s_comparisons">
+<div class="secured-content">
     <div class="container">
         <div class="row">
             <!--first colum-->
@@ -147,6 +163,7 @@
             </div>
         </div>
     </div>
+</div>
 </section>
 
 <!--footer section------------------------------------------------------->

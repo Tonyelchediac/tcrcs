@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | TCRCS</title>
+    <title>Pricing | TCRCS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="x-icon" href="images/TON.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -23,8 +23,8 @@
          <ul class="menu">
             <li class="li" cdslsk><a href="index.html">Home</a></li>
             <li class="li" cdslsk><a href="services.html">Services</a></li>
-            <li class="li" cdslsk><a href="pricinglogin.html">pricing</a></li>
-            <li class="li" cdslsk><a href="about.html" style="color: blue; text-shadow: 2px 2px 4px blue;">About Us</a></li>
+            <li class="li" cdslsk><a href="pricinglogin.html" style="color: blue; text-shadow: 2px 2px 4px blue;">pricing</a></li>
+            <li class="li" cdslsk><a href="about.html">About Us</a></li>
             <li class="li" cdslsk><a href="contact.html">Contact Us</a></li>
             <li class="li" cdslsk><a href="tel:+96171096971"><font color="blue"><i class='bx bxs-phone-call'></i> Click to call us</font></a></li>
           </ul>
@@ -41,85 +41,33 @@
 
    <section id="home" class="home-pricing">
     <div class="home-content">
-      <h1 cdslsk>About <span>Us</span></h1>
+      <h1 cdslsk>Pricing log <span>in</span></h1>
     </div>
 </section>
 
-<!--about section----------------------------------------------------------------------------->
-<section id="about" class="about">
-    <div class="aboutdisplay">
-      <div class="img-about">
-        <img src="images/s_text_image.svg" alt="">
-      </div>
-    <div class="about-content" cdslsk>
-        <h3>Boost your productivity</h3>
-        <p>Efficiency requires the right tools. Imagine Batman saving Gotham City without his bat-tools?
-    
-          There's no magic involved, it's time to get the tools you deserve.</p>
-           <div class="btn-box">
-            <button class="btn" >Learn More ></button>
-            </div>
-      </div>
+<!--pricing section----------------------------------------------------------------------------->
+<section id="contact" class="contant">
+    <div class="main-text" cdslsk>
+        <span> Enter passcode to open the pricing page</span>
     </div>
-    <hr>
-    <div class="aboutdisplay1">
-    <div class="about-content" cdslsk>
-        <span></span>
-        <h2></h2>
-        <h3>A new world of possibilities</h3>
-        <p>Working in the office is good, but working remotely without distractions is even better. Our cloud service makes accessing your data easier than ever.
-    
-          Get what you need, when and where you need it.</p>
-           <div class="btn-box">
-            <button class="btn" >Learn More ></button>
-            </div>
-      </div>
-      <div class="img-about">
-        <img src="images/s_image_text.svg" alt="">
-      </div>
-    </div>
-    </section>
-<!--maximize section---------------------------------------------------------------------------->
-<section id="features" class="maximize">
-    <p>Maximize your efficiency</p>
-</section>
-<!--about us section---------------------------------------------------------------------------->
-<section id="features" class="features-about">
-  <div class="dis-about">
-  <div class="wrapper">
-    <img src="images/tony image.jpg" alt="">
-    <div class="text-box">
-      <h3>Tony AlChediac, CEO</h3>
-      <p>Founder and chief visionary, Tony is the driving force behind the company. He loves to keep his hands full by participating in the development of the software, marketing, and customer experience strategies.</p>
-    </div>
-  </div>
-  <div class="wrapper">
-    <img src="images/s_company_team_image_2.jpg" alt="">
-    <div class="text-box">
-      <h3>Mich Stark, COO</h3>
-      <p>Mich loves taking on challenges. With his multi-year experience as CTO in the software industry, Mich has helped the company to get where it is today. Mich is among the best minds in programming.</p>
-    </div>
-  </div>
-  </div>
-  <div class="dis-about">
-    <div class="wrapper">
-      <img src="images/s_company_team_image_3.jpg" alt="">
-      <div class="text-box">
-        <h3>Aline Turner, CTO</h3>
-        <p>Aline is one of the iconic people in life who can say they love what they do. She mentors 100+ in-house programmers and looks after the community of thousands of developers.</p>
-      </div>
-    </div>
-    <div class="wrapper">
-      <img src="images/s_company_team_image_4.jpg" alt="">
-      <div class="text-box">
-        <h3>Iris Joe, CFO</h3>
-        <p>Iris, with her international experience, helps us easily understand the numbers and improves them. She is determined to drive success and delivers her professional acumen to bring the company to the next level.</p>
-      </div>
-    </div>
+    <div class="form">
+        <input type="password" id="passcode" placeholder="Enter your passcode">
+        <div class="btn-box formBtn"  cdslsk>
+          <button class="btn" onclick="checkPasscode()">Submit</button>
+        </div> 
     </div>
 </section>
-<!--contact section---------------------------------------------------------------------------->
 
+<!--script section---------------------------------------------------------------------------->
+
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+
+<!--project pricing payment section---------------------------------------------------------------------------->
+   
 <!--footer section------------------------------------------------------->
 
 <footer>
@@ -134,16 +82,13 @@
       </div>
     </section>
     <div class="footer-content">
-      <p cdslsk>Copyright &copy; 2023 by TCRCS || All Right Reserved.
-        <br>
-        Tony Company - Run Codes & Softwares.
-      </p>
-      <a href="#home"><i class='bx bx-arrow-from-bottom'></i></a>
-  </div>
+        <p cdslsk>Copyright &copy; 2023 by TCRCS || All Right Reserved.
+          <br>
+          Tony Company - Run Codes & Softwares.
+        </p>
+        <a href="#home"><i class='bx bx-arrow-from-bottom'></i></a>
+    </div>
 </footer>
 
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="script.js"></script>
 </body>
 </html>

@@ -54,12 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
-///////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////
-
-
 /////////scrollreveal////////////////////////////
 
 const sr = ScrollReveal({
@@ -85,7 +79,7 @@ sr.reveal('.main-text')
 sr.reveal('.col-lg-4')
 sr.reveal('.maximize p')
 
-////////////////////image slides////////////////////////////////////////////
+//////////image slides/////////////////////////////
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -114,7 +108,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-/////////send mail//////////////////////////////////////////////////
+/////////send mail//////////////////////////////
 
 function submitForm() {
 
@@ -139,3 +133,31 @@ function submitForm() {
   );
   return false;
 }
+
+////passcode for pricing page///////////////////
+
+function checkPasscode() {
+  var passcodeInput = document.getElementById("passcode").value;
+
+  var correctPasscode = "1234";
+
+  if (passcodeInput === correctPasscode) {
+      sessionStorage.setItem("validPasscode", "true");
+      window.location.href = "pricing.html";
+  } else {
+      document.getElementById("passcode").value = "";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -930,8 +930,36 @@ footer a i{
   margin-left: 20px;
  }
 
- /*--- Contact page ----------------------------------*/
+ /*--- pricing-login page ----------------------------------*/
 
+ .contant .form input, .contant .form textarea{
+  width: 100%;
+  color: var(--text-color);
+  background-color: var(--secon-bg-color);
+  margin-bottom: .8rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.contant .form textarea{
+  resize: none;
+  background-color: var(--secon-bg-color);
+}
+
+.btn-box-formBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-box-formBtn .btn{
+  cursor: pointer;
+  font-size: .8rem;
+  align-items: center;
+}
 
 
 
