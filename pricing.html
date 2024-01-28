@@ -160,6 +160,12 @@
       sessionStorage.removeItem("validPasscode");
       history.replaceState(null, document.title, window.location.href);
     });
+    window.addEventListener("beforeunload", function() {
+    sessionStorage.removeItem("validPasscode");
+    history.replaceState(null, document.title, window.location.href);
+    window.location.reload(true);
+});
+
   </script>
 
 <!--footer section------------------------------------------------------->
