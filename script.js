@@ -153,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function() {
   if (!sessionStorage.getItem("validPasscode")) {
   }
 });
-
 window.addEventListener("beforeunload", function() {
   sessionStorage.removeItem("validPasscode");
   history.replaceState(null, document.title, window.location.href);
