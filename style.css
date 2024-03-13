@@ -1199,16 +1199,16 @@ nav .menu.open {
 }
 
 
-   /* @keyframes menuItemFadeIn {
+    @keyframes menuItemFadeIn {
       from {
         opacity: 0;
-        transform: translateX(-200px);
+        transform: translateX(200px);
       }
       to {
         opacity: 1;
         transform: translateX(0);
       }
-    } */
+    }
     
     .menu li {
       animation: menuItemFadeIn 1s ease;
