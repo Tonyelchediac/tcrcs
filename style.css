@@ -793,21 +793,29 @@ footer a i{
   justify-content: center;
 }
 
-.wrapper{
+.wrapper {
   margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.wrapper img{
+.wrapper img {
   max-width: 100px;
   max-height: 100px;
-  float: auto;
-  margin-right: 60px;
+  margin-bottom: 20px;
   border: 3px solid black;
   border-radius: 50%;
 }
 
+.text-box h3{
+  padding: 0px 100px;
+}
+
 .text-box p{
   font-size: 15px;
+  padding: 0px 100px;
 }
 
 /*---services page-----------------------------------------*/
@@ -1288,6 +1296,17 @@ nav .menu.open {
     .wrapper{
       margin: 30px auto;
       width: 80%;
+    }
+
+    .text-box h3{
+      text-align: center;
+      padding:0px;
+    }
+    
+    .text-box p{
+      text-align: center;
+      font-size: 15px;
+      padding: 0px;
     }
 
     .dis-about{
