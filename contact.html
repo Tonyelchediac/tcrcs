@@ -47,45 +47,51 @@
 
 <!--pricing section----------------------------------------------------------------------------->
 <section id="contact" class="contant">
-    <div class="main-text" cdslsk>
+    <div class="main-text">
         <span> Ask a question or help</span>
     </div>
-    <form method="post" autocomplete="off" name="google-sheet" id="myform">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="text" name="email" placeholder="Your Email" required>
-        <input type="text" name="address" placeholder="Your Address" required>
-        <input type="number" name="phone" placeholder="+Code-Phone Number" required>
-        <input type="text" id="priceInput" name="s_comparisons_price" readonly>
-        <textarea name="message" cols="30" rows="10" placeholder="How can we help you" required></textarea>
+    <form id="contactForm">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <input type="text" id="address" name="address" placeholder="Your Address" required>
+        <input type="tel" id="phone" name="phone" placeholder="+Code-Phone Number" required>
+        <textarea id="message" name="message" cols="30" rows="10" placeholder="How can we help you?" required></textarea>
         <div class="btn-box formBtn">
-            <button type="submit" class="btn" onclick="reserform()">Send Message</button>
+            <button type="button" class="btn" onclick="sendMail()">Send Message</button>
         </div>
     </form>
     <div class="location">
         <p><i class='bx bx-location-plus'></i> Location: Batroun Liban North-Lebanon</p>
-        <p><i class='bx bx-buildings' ></i> Building: TCRCS - Bellani Street</p>
+        <p><i class='bx bx-buildings'></i> Building: TCRCS - Bellani Street</p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("QUVaIP-QY2pkKySli");
+        })();
+    
+        function sendMail() {
+            let params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                address: document.getElementById("address").value,
+                phone: document.getElementById("phone").value,
+                message: document.getElementById("message").value
+            };
+    
+            emailjs.send("service_almgaw2", "template_htah8xf", params)
+                .then(function(response) {
+                    alert("Your message has been sent successfully!");
+                    document.getElementById("contactForm").reset();
+                }, function(error) {
+                    console.log("Error sending email:", error);
+                    alert("An error occurred. Please try again later.");
+                });
+        }
+    </script>
 </section>
+
 <!--script section---------------------------------------------------------------------------->
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyI_iCDrLRlDjH09o8WJqMLpYU5yGi50LZzmCR0fPJrbU824nteU8j5cqJ1n2A-osD9/exec';
-    const form = document.forms['google-sheet'];
-
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => {
-                alert("Thanks for Contacting us..! We Will Contact You As Soon As Possible...");
-                resetForm();
-            })
-            .catch(error => console.error('Error!', error.message));
-    });
-
-    function resetForm() {
-        form.reset();
-    }
-</script>
 
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
