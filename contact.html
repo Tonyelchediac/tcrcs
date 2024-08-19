@@ -23,7 +23,6 @@
          <ul class="menu">
             <li class="li" cdslsk><a href="index.html">Home</a></li>
             <li class="li" cdslsk><a href="services.html">Services</a></li>
-            <li class="li" cdslsk><a href="pricinglogin.html">pricing</a></li>
             <li class="li" cdslsk><a href="about.html">About Us</a></li>
             <li class="li" cdslsk><a href="contact.html" style="color: blue; text-shadow: 2px 2px 4px blue;">Contact Us</a></li>
             <li class="li" cdslsk><a href="tel:+96171096971"><font color="blue"><i class='bx bxs-phone-call'></i> Click to call us</font></a></li>
@@ -50,20 +49,19 @@
     <div class="main-text">
         <span> Ask a question or help</span>
     </div>
+    <div class="contact-container">
     <form id="contactForm">
         <input type="text" id="name" name="name" placeholder="Your Name" required>
         <input type="email" id="email" name="email" placeholder="Your Email" required>
         <input type="text" id="address" name="address" placeholder="Your Address" required>
         <input type="tel" id="phone" name="phone" placeholder="+Code-Phone Number" required>
         <textarea id="message" name="message" cols="30" rows="10" placeholder="How can we help you?" required></textarea>
-        <div class="btn-box formBtn">
+        <div class="btn-box">
             <button type="button" class="btn" onclick="sendMail()">Send Message</button>
+            <div id="statusMessage" style="color: blue; margin-top: 20px;"></div>
         </div>
     </form>
-    <div class="location">
-        <p><i class='bx bx-location-plus'></i> Location: Batroun Liban North-Lebanon</p>
-        <p><i class='bx bx-buildings'></i> Building: TCRCS - Bellani Street</p>
-    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
     <script>
         (function() {
@@ -71,24 +69,56 @@
         })();
     
         function sendMail() {
+            // Get all input fields and textarea
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let address = document.getElementById("address").value;
+            let phone = document.getElementById("phone").value;
+            let message = document.getElementById("message").value;
+    
+            // Get the status message container
+            let statusMessage = document.getElementById("statusMessage");
+    
+            // Validate that all fields are filled
+            if (name === "" || email === "" || address === "" || phone === "" || message === "") {
+                statusMessage.textContent = "Please fill out all fields before sending the message.";
+                statusMessage.style.color = "blue";
+                return; // Stop function execution if validation fails
+            }
+    
+            // Clear previous status message
+            statusMessage.textContent = "Please wait...";
+    
             let params = {
-                name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                address: document.getElementById("address").value,
-                phone: document.getElementById("phone").value,
-                message: document.getElementById("message").value
+                name: name,
+                email: email,
+                address: address,
+                phone: phone,
+                message: message
             };
     
             emailjs.send("service_almgaw2", "template_htah8xf", params)
                 .then(function(response) {
-                    alert("Your message has been sent successfully!");
+                    statusMessage.textContent = "Your message has been sent successfully!";
+                    statusMessage.style.color = "green";
                     document.getElementById("contactForm").reset();
                 }, function(error) {
+                    statusMessage.textContent = "An error occurred. Please try again later.";
+                    statusMessage.style.color = "blue";
                     console.log("Error sending email:", error);
-                    alert("An error occurred. Please try again later.");
                 });
         }
     </script>
+</div>
+
+
+
+
+
+
+
+
+
 </section>
 
 <!--script section---------------------------------------------------------------------------->
@@ -97,25 +127,6 @@
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
-
-<!--project pricing payment section---------------------------------------------------------------------------->
-   
-<script>
-    window.onload =function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const price = urlParams.get('s_comparisons_price');
-        const priceInput = document.getElementById('priceInput');
-        const mainText = document.querySelector('.main-text span');
-        const homeContent = document.querySelector('.home-content h1');
-        const homeConten = document.querySelector('.home-content .p');
-
-        if (priceInput && price) {
-            priceInput.value = price || '';
-            mainText.textContent = 'Order - Price: ' + price + ' / week';
-            homeContent.innerHTML = 'Contact <span style="color: blue;">Us</span><br><font style="font-size: 1.25rem;"> ( Order <span style="color: blue;">Now </span>)</font>';
-        }
-    }
-</script>
 <!--footer section------------------------------------------------------->
 
 <footer>
